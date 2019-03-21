@@ -20,6 +20,7 @@ public class ArrayTest_6 {
 		
 		Scanner sc = new Scanner(System.in);
 		int select=0; // 번호 선택
+		int select2=0;
 		int count =0;
 		int[] num = null; // 학생 번호 배열
 		String[] std = null; // 학생 이름 배열
@@ -61,18 +62,29 @@ public class ArrayTest_6 {
 		} // 등록  if문
 		if(select==2) {
 			System.out.println("전체 정보를 조회합니다.");
-			System.out.println();
-		}
+			for(int i=0; i<num.length; i++) {
+			System.out.println("* 학생 번호 : " + num[i] + ", 학생 이름 : " + std[i] + ", 국어 점수 : " + kor[i]
+														+ ", 수학 점수 : " + kor[i] + ", 영어 점수 : " + kor[i]);
+			}
+		}   // 전체 조회 if문
 		if(select==3) {
 			System.out.println("검색할 학생의 번호를 입력하세요.");
-		}
+			select = sc.nextInt();
+			for(int i=0; i<num.length; i++) {
+				if(i==select2) { 
+					System.out.println("* 학생 번호 : " + num[i] + ", 학생 이름 : " + std[i] + ", 국어 점수 : " + kor[i]
+										+ ", 수학 점수 : " + kor[i] + ", 영어 점수 : " + kor[i]);
+				}   // 검색할 정보 if문
+			} // for문
+		} // 학생 정보 검색 if문
+		
 		if(select==4) {
 			System.out.println("프로그램을 종료합니다.");
 			break;
 		}  // 종료 if문
 		
 		
-		}
+		} // 번호 선택 while문
 		
 		
 	}
